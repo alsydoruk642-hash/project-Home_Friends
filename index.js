@@ -1,31 +1,31 @@
-import{a as m}from"./assets/vendor-CC12I-6Z.js";(function(){const t=document.createElement("link").relList;if(t&&t.supports&&t.supports("modulepreload"))return;for(const i of document.querySelectorAll('link[rel="modulepreload"]'))n(i);new MutationObserver(i=>{for(const r of i)if(r.type==="childList")for(const p of r.addedNodes)p.tagName==="LINK"&&p.rel==="modulepreload"&&n(p)}).observe(document,{childList:!0,subtree:!0});function e(i){const r={};return i.integrity&&(r.integrity=i.integrity),i.referrerPolicy&&(r.referrerPolicy=i.referrerPolicy),i.crossOrigin==="use-credentials"?r.credentials="include":i.crossOrigin==="anonymous"?r.credentials="omit":r.credentials="same-origin",r}function n(i){if(i.ep)return;i.ep=!0;const r=e(i);fetch(i.href,r)}})();const y="https://paw-hut.b.goit.study",E="/api/categories",P="/api/animals";async function B(){return(await m.get(y+E)).data}async function h(s,t,e){const n={page:t,limit:e};return s!=="all"&&(n.categoryId=String(s)),(await m.get(y+P,{params:n})).data}let o=1,L=1,a=8,f="all",g=0;const d=document.querySelector(".pet-list-categories"),c=document.querySelector(".pet-list-cards"),l=document.querySelector(".pet-list-more-btn"),u=document.querySelector(".pet-list-loader");d.addEventListener("click",k);c.addEventListener("click",T);l.addEventListener("click",N);function b(){return window.innerWidth<1366?8:9}function I(){l&&l.classList.remove("hidden")}function v(){l&&l.classList.add("hidden")}function C(){u&&u.classList.remove("hidden")}function w(){u&&u.classList.add("hidden")}function $(){o<L?I():alert("В базі даних більше нема карток")}function q(s){window.scrollBy({top:g*s,behavior:"smooth"})}function O(){c&&(c.innerHTML="")}async function A(){if(d)try{const t=(await B()??[]).map(e=>`<button
+import{a as h,S as I,N as q,P as O}from"./assets/vendor-B7uYEzEb.js";(function(){const e=document.createElement("link").relList;if(e&&e.supports&&e.supports("modulepreload"))return;for(const n of document.querySelectorAll('link[rel="modulepreload"]'))s(n);new MutationObserver(n=>{for(const a of n)if(a.type==="childList")for(const g of a.addedNodes)g.tagName==="LINK"&&g.rel==="modulepreload"&&s(g)}).observe(document,{childList:!0,subtree:!0});function i(n){const a={};return n.integrity&&(a.integrity=n.integrity),n.referrerPolicy&&(a.referrerPolicy=n.referrerPolicy),n.crossOrigin==="use-credentials"?a.credentials="include":n.crossOrigin==="anonymous"?a.credentials="omit":a.credentials="same-origin",a}function s(n){if(n.ep)return;n.ep=!0;const a=i(n);fetch(n.href,a)}})();const y="https://paw-hut.b.goit.study",x="/api/categories",A="/api/animals";async function N(){return(await h.get(y+x)).data}async function b(t,e,i){const s={page:e,limit:i};return t!=="all"&&(s.categoryId=String(t)),(await h.get(y+A,{params:s})).data}let c=1,L=1,r=8,f="all",m=0;const u=document.querySelector(".pet-list-categories"),l=document.querySelector(".pet-list-cards"),d=document.querySelector(".pet-list-more-btn"),p=document.querySelector(".pet-list-loader");u.addEventListener("click",R);l.addEventListener("click",U);d.addEventListener("click",_);function w(){return window.innerWidth<1366?8:9}function k(){d&&d.classList.remove("hidden")}function v(){d&&d.classList.add("hidden")}function C(){p&&p.classList.remove("hidden")}function S(){p&&p.classList.add("hidden")}function E(){c<L?k():alert("В базі даних більше нема карток")}function j(t){window.scrollBy({top:m*t,behavior:"smooth"})}function T(){l&&(l.innerHTML="")}async function D(){if(u)try{const e=(await N()??[]).map(i=>`<button
                 type="button"
                 class="pet-list-categories-btn"
-                data-id="${e._id}"
+                data-id="${i._id}"
             >
-                ${e.name}
-            </button>`).join("");d.innerHTML=`<button
+                ${i.name}
+            </button>`).join("");u.innerHTML=`<button
             type="button"
             class="pet-list-categories-btn active"
             data-id="all"
         >
             Всі
         </button>
-        ${t}`}catch{alert("Помилка завантаження категорій хвостиків")}}function M(s){const t=(s??[]).map(e=>`<li class="pet-list-card-item">
-            <img class="pet-list-card-img" src="${e.image}" />
-            <p class="pet-list-card-type">${e.species}</p>
-            <p class="pet-list-card-name">${e.name}</p>
+        ${e}`}catch{alert("Помилка завантаження категорій хвостиків")}}function P(t){const e=(t??[]).map(i=>`<li class="pet-list-card-item">
+            <img class="pet-list-card-img" src="${i.image}" />
+            <p class="pet-list-card-type">${i.species}</p>
+            <p class="pet-list-card-name">${i.name}</p>
             <ul class="pet-list-card-filter">
-            ${(e.categories??[]).map(n=>`<li class="pet-list-card-filter-item">${n.name}</li>`).join("")}
+            ${(i.categories??[]).map(s=>`<li class="pet-list-card-filter-item">${s.name}</li>`).join("")}
             </ul>
             <div class="pet-list-card-age-gender">
-            <p class="pet-list-card-age">${e.age}</p>
-            <p class="pet-list-card-gender">${e.gender}</p>
+            <p class="pet-list-card-age">${i.age}</p>
+            <p class="pet-list-card-gender">${i.gender}</p>
             </div>
-            <p class="pet-list-card-about">${e.shortDescription}</p>
+            <p class="pet-list-card-about">${i.shortDescription}</p>
             <button type="button" class="pet-list-card-more-btn" 
-            data-id="${e._id}">
+            data-id="${i._id}">
             Дізнатись більше
             </button>
-        </li>`).join("");c&&c.insertAdjacentHTML("beforeend",t)}async function S(s){f=s,o=1,a=b(),v(),C(),O();try{const t=await h(f,o,a);if(t.animals.length===0){alert("Більше нема даних");return}L=Math.ceil(t.totalItems/a),M(t.animals),$();const e=document.querySelector(".pet-list-card-item");e?g=e.getBoundingClientRect().height:g=0}catch{alert("Помилка завантаження карток тваринок")}finally{w()}}async function j(){o+=1,a=b(),v(),C();try{const s=await h(f,o,a);M(s.animals),q(1),$()}catch{alert("Помилка завантаження карток тваринок")}w()}function k(s){const t=s.target.closest(".pet-list-categories-btn");if(!t)return;const e=d.querySelector(".active");e&&e.classList.remove("active"),t.classList.add("active");const n=t.dataset.id;S(n)}function N(){j()}function T(s){const t=s.target.closest(".pet-list-card-more-btn");t&&t.dataset.id}A();S("all");
+        </li>`).join("");l&&l.insertAdjacentHTML("beforeend",e)}async function M(t){f=t,c=1,r=w(),v(),C(),T();try{const e=await b(f,c,r);if(e.animals.length===0){alert("Більше нема даних");return}L=Math.ceil(e.totalItems/r),P(e.animals),E();const i=document.querySelector(".pet-list-card-item");i?m=i.getBoundingClientRect().height:m=0}catch{alert("Помилка завантаження карток тваринок")}finally{S()}}async function H(){c+=1,r=w(),v(),C();try{const t=await b(f,c,r);P(t.animals),j(1),E()}catch{alert("Помилка завантаження карток тваринок")}S()}function R(t){const e=t.target.closest(".pet-list-categories-btn");if(!e)return;const i=u.querySelector(".active");i&&i.classList.remove("active"),e.classList.add("active");const s=e.dataset.id;M(s)}function _(){H()}function U(t){const e=t.target.closest(".pet-list-card-more-btn");e&&e.dataset.id}const o=new I(".swiper",{modules:[q,O],navigation:{nextEl:".swiper-button-next.about-us-button-next",prevEl:".swiper-button-prev.about-us-button-prev"},pagination:{el:".about-us-swiper-pagination",clickable:!0,dynamicBullets:window.innerWidth<768}}),$=window.matchMedia("(max-width: 767px)");function B(t){console.log("matches:",t.matches),o.params.pagination.dynamicBullets=t.matches,o.pagination.destroy(),o.pagination.init(),o.pagination.render(),o.pagination.update(),console.log(o.params.pagination.dynamicBullets)}B($);$.addEventListener("change",B);D();M("all");
 //# sourceMappingURL=index.js.map
