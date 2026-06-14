@@ -141,7 +141,21 @@ export async function startPetList(category) {
     }
     countPages = Math.ceil(items.totalItems / countCards);
     renderPetList(items.animals);
-    checkMoreButton();
+
+    //#region Extra task
+
+    if (isPaginationMode()) {
+      hideLoadMoreButton();
+      showPagination();
+      renderPagination();
+    } else {
+      hidePagination();
+      checkMoreButton();
+    }
+
+    //#endregion
+
+    // checkMoreButton();
     const cardItem = document.querySelector('.pet-list-card-item');
     if (cardItem) {
       heightCard = cardItem.getBoundingClientRect().height;
@@ -157,6 +171,11 @@ export async function startPetList(category) {
 }
 
 async function continuePetList() {
+  //#region Extra task
+
+  if (isPaginationMode()) return;
+
+  //#endregion
   curPage += 1;
   countCards = checkCountCards();
   hideLoadMoreButton();
@@ -192,3 +211,114 @@ function onCardClick(event) {
   if (!btn) return;
   const id = btn.dataset.id;
 }
+
+//#region Extra task
+
+const paginationElem = document.querySelector('.pet-list-pagination');
+
+function isPaginationMode() {
+  return window.innerWidth >= 768;
+}
+
+function showPagination() {
+  if (paginationElem) {
+    paginationElem.classList.remove('hidden');
+  }
+}
+
+function hidePagination() {
+  if (paginationElem) {
+    paginationElem.classList.add('hidden');
+  }
+}
+
+function renderPagination() {
+  if (!paginationElem) return;
+
+  let markup = `
+    <button
+      class="pagination-arrow"
+      data-page="${curPage - 1}"
+      ${curPage === 1 ? 'disabled' : ''}
+    >
+      ←
+    </button>
+  `;
+
+  for (let i = 1; i <= countPages; i += 1) {
+    markup += `
+      <button
+        class="pagination-btn ${i === curPage ? 'active' : ''}"
+        data-page="${i}"
+      >
+        ${i}
+      </button>
+    `;
+  }
+
+  markup += `
+    <button
+      class="pagination-arrow"
+      data-page="${curPage + 1}"
+      ${curPage === countPages ? 'disabled' : ''}
+    >
+      →
+    </button>
+  `;
+
+  paginationElem.innerHTML = markup;
+}
+
+paginationElem.addEventListener('click', onPaginationClick);
+
+async function loadPaginationPage(page) {
+  curPage = page;
+
+  hideLoadMoreButton();
+  showLoader();
+  clearPetList();
+
+  try {
+    const items = await getCategory(categoryId, curPage, countCards);
+
+    renderPetList(items.animals);
+    renderPagination();
+
+    window.scrollTo({
+      top: petListElem.offsetTop - 100,
+      behavior: 'smooth',
+    });
+  } catch (error) {
+    console.error(error);
+  } finally {
+    hideLoader();
+  }
+}
+
+async function onPaginationClick(event) {
+  const btn = event.target.closest('button');
+
+  if (!btn) return;
+
+  const page = Number(btn.dataset.page);
+
+  if (!page || page < 1 || page > countPages || page === curPage) {
+    return;
+  }
+
+  await loadPaginationPage(page);
+}
+
+//#endregion
+
+let isMobile = window.innerWidth < 768;
+
+window.addEventListener('resize', () => {
+  const currentIsMobile = window.innerWidth < 768;
+
+  if (currentIsMobile === isMobile) return;
+
+  isMobile = currentIsMobile;
+
+  startPetList(categoryId);
+});
