@@ -9,7 +9,7 @@ let heightCard = 0;
 const categoriesElem = document.querySelector('.pet-list-categories');
 const petListElem = document.querySelector('.pet-list-cards');
 const moreBtn = document.querySelector('.pet-list-more-btn');
-const loader = document.querySelector('.pet-list-loader');
+const loader = document.querySelector('.loader');
 
 categoriesElem.addEventListener('click', onCategoriesClick);
 petListElem.addEventListener('click', onCardClick);
@@ -217,7 +217,7 @@ function onCardClick(event) {
 const paginationElem = document.querySelector('.pet-list-pagination');
 
 function isPaginationMode() {
-  return window.innerWidth >= 768;
+  return window.innerWidth >= 1365;
 }
 
 function showPagination() {
@@ -235,38 +235,83 @@ function hidePagination() {
 function renderPagination() {
   if (!paginationElem) return;
 
-  let markup = `
-    <button
-      class="pagination-arrow"
-      data-page="${curPage - 1}"
-      ${curPage === 1 ? 'disabled' : ''}
-    >
-      ←
-    </button>
-  `;
+  let pagesMarkup = '';
 
-  for (let i = 1; i <= countPages; i += 1) {
-    markup += `
-      <button
-        class="pagination-btn ${i === curPage ? 'active' : ''}"
-        data-page="${i}"
-      >
-        ${i}
-      </button>
-    `;
+  // мало сторінок
+  if (countPages <= 5) {
+    for (let i = 1; i <= countPages; i += 1) {
+      pagesMarkup += createPageButton(i);
+    }
   }
 
-  markup += `
+  // початок
+  else if (curPage <= 3) {
+    pagesMarkup += createPageButton(1);
+    pagesMarkup += createPageButton(2);
+    pagesMarkup += createPageButton(3);
+    pagesMarkup += `<span class="pagination-dots">...</span>`;
+    pagesMarkup += createPageButton(countPages);
+  }
+
+  // кінець
+  else if (curPage >= countPages - 2) {
+    pagesMarkup += createPageButton(1);
+    pagesMarkup += `<span class="pagination-dots">...</span>`;
+
+    for (let i = countPages - 2; i <= countPages; i += 1) {
+      pagesMarkup += createPageButton(i);
+    }
+  }
+
+  // середина
+  else {
+    pagesMarkup += createPageButton(1);
+    pagesMarkup += `<span class="pagination-dots">...</span>`;
+
+    pagesMarkup += createPageButton(curPage - 1);
+    pagesMarkup += createPageButton(curPage);
+    pagesMarkup += createPageButton(curPage + 1);
+
+    pagesMarkup += `<span class="pagination-dots">...</span>`;
+    pagesMarkup += createPageButton(countPages);
+  }
+
+  paginationElem.innerHTML = `
+  <button
+    class="pagination-arrow"
+    data-page="${curPage - 1}"
+    ${curPage === 1 ? 'disabled' : ''}
+  >
+    <svg class="pagination-icon" width="16" height="16">
+      <use href="/sprite.svg#icon-arrow_left"></use>
+    </svg>
+  </button>
+
+  <div class="pagination-pages">
+    ${pagesMarkup}
+  </div>
+
+  <button
+    class="pagination-arrow"
+    data-page="${curPage + 1}"
+    ${curPage === countPages ? 'disabled' : ''}
+  >
+    <svg class="pagination-icon" width="16" height="16">
+      <use href="/sprite.svg#icon-arrow_right"></use>
+    </svg>
+  </button>
+`;
+}
+
+function createPageButton(page) {
+  return `
     <button
-      class="pagination-arrow"
-      data-page="${curPage + 1}"
-      ${curPage === countPages ? 'disabled' : ''}
+      class="pagination-btn ${page === curPage ? 'active' : ''}"
+      data-page="${page}"
     >
-      →
+      ${page}
     </button>
   `;
-
-  paginationElem.innerHTML = markup;
 }
 
 paginationElem.addEventListener('click', onPaginationClick);
@@ -311,10 +356,10 @@ async function onPaginationClick(event) {
 
 //#endregion
 
-let isMobile = window.innerWidth < 768;
+let isMobile = window.innerWidth < 1365;
 
 window.addEventListener('resize', () => {
-  const currentIsMobile = window.innerWidth < 768;
+  const currentIsMobile = window.innerWidth < 1365;
 
   if (currentIsMobile === isMobile) return;
 
