@@ -56,7 +56,11 @@
 }
 
 .pet-list-categories-btn:hover,
-.pet-list-categories-btn:focus,
+.pet-list-categories-btn:focus{
+  background-color: #eee9e3;
+}
+
+
 .pet-list-categories-btn.active {
   font-weight: 500;
   background-color: #eee9e3;
@@ -157,7 +161,12 @@
 }
 
 .pet-list-card-more-btn:hover,
-.pet-list-card-more-btn:focus,
+.pet-list-card-more-btn:focus {
+  background-color: #c3b49d;
+}
+
+
+
 .pet-list-card-more-btn:active {
   background-color: #c3b49d;
 }
@@ -180,7 +189,11 @@
 }
 
 .pet-list-more-btn:hover,
-.pet-list-more-btn:focus,
+.pet-list-more-btn:focus{
+  background-color: #eee9e3;
+}
+
+
 .pet-list-more-btn:active {
   background-color: #eee9e3;
   color: #02060a;
