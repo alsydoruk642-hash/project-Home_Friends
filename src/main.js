@@ -7,4 +7,3 @@ initSmoothScroll();
 initHeroAnimation();
 renderCategories();
 startPetList('all');
-

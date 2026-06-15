@@ -6,18 +6,18 @@
 html {
   scroll-behavior: smooth;
 }
-.nav-link {
+a {
   text-decoration: none;
 }
-.nav-link:focus,
-.nav-link:hover {
+a:focus,
+a:hover {
   text-decoration-line: underline;
 }
-.nav-link:active {
+a:active {
   color: #88765c;
   text-decoration-line: underline;
 }
-.nav-link:disabled {
+a:disabled {
   color: #02060a;
   pointer-events: none;
   opacity: 0.3;
@@ -48,7 +48,7 @@ html {
   display: block;
 }
 .icon-logo {
-  transition: transform 0.3s ease;
+  transform: transition 0.3s ease;
 }
 .icon-logo:hover,
 .icon-logo:focus,
@@ -72,51 +72,12 @@ html {
   fill: #2f2f37;
 }
 .friend-btn {
-  display: block;
-  background-color: #88765c;
-  font-family: inherit;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.5;
-  color: #ffffff;
-  border: 1px solid #88765c;
-  border-radius: 8px;
-  width: 130px;
-  height: 40px;
-
-  cursor: pointer;
-  transition: all 0.2s ease;
-}
-.friend-btn:hover {
-  background-color: #c3b49d;
-  color: #02060a;
-}
-  .friend-btn:active {
-    border: 1px solid #02060A;
-    box-shadow: inset 0 4px 6px -2px rgba(0, 0, 0, 0.03), inset 0 12px 16px -4px rgba(0, 0, 0, 0.08);
-    background: #C3B49D;
-    transform: scale(0.97);
-  }
-.friend-btn:focus-visible {
-  outline: 2px solid #c3b49d;
-  outline-offset: 2px;
-}
-.friend-btn:disabled {
-  color: #ffffff;
-  background-color: #88765c;
-  opacity: 0.3;
-}
-.friend-btn {
   display: none;
 }
-
 @media screen and (min-width: 768px) {
   .header-container {
     padding: 0 32px;
     width: 100%;
-  }
-  .friend-btn {
-    display: none;
   }
 }
 @media screen and (min-width: 1366px) {
@@ -151,6 +112,27 @@ html {
   }
   .friend-btn {
     display: block;
+    background-color: #88765c;
+    font-family: inherit;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #ffffff;
+    border: 1px solid #88765c;
+    border-radius: 8px;
+    width: 130px;
+    height: 40px;
+  }
+  .friend-btn:hover,
+  .friend-btn:focus,
+  .friend-btn:active {
+    background-color: #c3b49d;
+    color: #02060a;
+  }
+  .friend-btn:disabled {
+    color: #ffffff;
+    background-color: #88765c;
+    opacity: 0.3;
   }
   .burger-btn {
     display: none;
