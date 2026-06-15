@@ -12,9 +12,9 @@
     />
     <title>Home_Friends</title>
     <script type="module" crossorigin src="/project-Home_Friends/index.js"></script>
-    <link rel="modulepreload" crossorigin href="/project-Home_Friends/assets/vendor-DdKRWa6x.js">
+    <link rel="modulepreload" crossorigin href="/project-Home_Friends/assets/vendor-DgsDRJCq.js">
     <link rel="stylesheet" crossorigin href="/project-Home_Friends/assets/vendor-XYtvLfmp.css">
-    <link rel="stylesheet" crossorigin href="/project-Home_Friends/assets/index-DEI7H3ud.css">
+    <link rel="stylesheet" crossorigin href="/project-Home_Friends/assets/index-DTo5tdHe.css">
   </head>
   <body>
     <!-- Header -->
@@ -621,7 +621,66 @@
   </div>
 </div>
 
-    
+    <div class="backdrop is-hidden">
+  <section class="application">
+    <button type="button" class="app-modal-close">&times;</button>
+    <div class="application-content">
+      <h2 class="app-modal-title">Залишіть заявку на знайомство</h2>
+
+      <form class="app-modal-form">
+        <div class="modal-field">
+          <label for="name" class="modal-label"
+            >Ім’я <span aria-hidden="true">*</span></label
+          >
+
+          <input
+            id="name"
+            name="name"
+            type="text"
+            class="modal-input"
+            placeholder="Андрій"
+            required
+          />
+          <p class="modal-error-text">"Введіть ім’я"</p>
+        </div>
+
+        <div class="modal-field">
+          <label for="phone" class="modal-label"
+            >Телефон <span aria-hidden="true">*</span></label
+          >
+
+          <input
+            id="phone"
+            name="phone"
+            type="tel"
+            class="modal-input"
+            placeholder="380955559922"
+            required
+          />
+
+          <p class="modal-error-text">"Введіть номер телефону"</p>
+        </div>
+
+        <div class="modal-field">
+          <label for="comment" class="modal-label">Коментар</label>
+
+          <textarea
+            id="comment"
+            name="comment"
+            class="modal-textarea"
+            placeholder="Напишіть ваш коментар"
+            required
+          ></textarea>
+
+          <p class="modal-error-text">"Введіть коментар"</p>
+        </div>
+
+        <button type="submit" class="modal-button" disabled>Надіслати</button>
+      </form>
+    </div>
+  </section>
+</div>
+
 
 
     <!-- <div>
