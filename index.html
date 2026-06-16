@@ -14,7 +14,7 @@
     <script type="module" crossorigin src="/project-Home_Friends/index.js"></script>
     <link rel="modulepreload" crossorigin href="/project-Home_Friends/assets/vendor-DgsDRJCq.js">
     <link rel="stylesheet" crossorigin href="/project-Home_Friends/assets/vendor-XYtvLfmp.css">
-    <link rel="stylesheet" crossorigin href="/project-Home_Friends/assets/index-CFGteYkp.css">
+    <link rel="stylesheet" crossorigin href="/project-Home_Friends/assets/index-ea1wo4Ar.css">
   </head>
   <body>
     <!-- Header -->
@@ -594,11 +594,12 @@
             id="name"
             name="name"
             type="text"
+            maxlength="32"
             class="modal-input"
             placeholder="Андрій"
             required
           />
-          <p class="modal-error-text">"Введіть ім’я"</p>
+          <p class="modal-error-text">Введіть ім’я</p>
         </div>
 
         <div class="modal-field">
@@ -615,7 +616,7 @@
             required
           />
 
-          <p class="modal-error-text">"Введіть номер телефону"</p>
+          <p class="modal-error-text">Введіть номер телефону</p>
         </div>
 
         <div class="modal-field">
@@ -624,12 +625,10 @@
           <textarea
             id="comment"
             name="comment"
+            maxlength="500"
             class="modal-textarea"
             placeholder="Напишіть ваш коментар"
-            required
           ></textarea>
-
-          <p class="modal-error-text">"Введіть коментар"</p>
         </div>
 
         <button type="submit" class="modal-button" disabled>Надіслати</button>
