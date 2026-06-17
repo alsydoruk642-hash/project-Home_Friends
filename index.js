@@ -73,8 +73,8 @@ import{S as K,N as X,P as z,A as pe,a as g,b as M,R as ge}from"./assets/vendor-D
         <h2 class="animal-modal-title">${e.name}</h2>
 
         <div class="animal-modal-meta">
-          <p class="animal-modal-info age">${e.age}</p>
-          <p class="animal-modal-info gender">${e.gender}</p>
+          <p class="animal-modal-info-data age">${e.age}</p>
+          <p class="animal-modal-info-data gender">${e.gender}</p>
         </div>
 
         <div class="animal-modal-scroll-container">
