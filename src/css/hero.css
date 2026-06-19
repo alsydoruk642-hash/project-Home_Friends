@@ -14,7 +14,7 @@
 
 /* HERO для екранів від 320px до 767px*/
 .hero {
-  margin: auto;
+  margin: 0 auto;
   width: 100%;
   max-width: 375px;
   padding-top: 64px;
@@ -39,11 +39,6 @@
 
 .hero-container {
   text-align: left;
-
-  margin-left: auto;
-  margin-right: auto;
-
-  box-sizing: border-box;
 }
 
 .hero-title {
