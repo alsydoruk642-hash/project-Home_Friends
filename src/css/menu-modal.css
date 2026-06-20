@@ -87,7 +87,7 @@
 
   flex-grow: 1;
 
-  font-family: inherit;
+  font-family: 'IBMPlexSans-Regular', sans-serif;
   font-weight: 400;
   font-size: 14px;
   line-height: 1.5;
@@ -111,7 +111,7 @@
   background-color: #88765c;
   color: #ffffff;
 
-  font-family: inherit;
+  font-family: IBMPlexSans-Regular;
   font-size: 14px;
   line-height: 1.5;
 
