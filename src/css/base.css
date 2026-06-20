@@ -8,14 +8,13 @@ html {
 }
 
 body {
-  font-family: 'IBM Plex Sans', sans-serif;
+  font-family: 'IBMPlexSans-Medium', sans-serif;
   background-color: #f6f4f1;
-  font-family: inherit;
 }
 
 button {
   cursor: pointer;
-  font-family: inherit;
+  font-family: 'IBMPlexSans-Regular', sans-serif;
 }
 
 h1 {
