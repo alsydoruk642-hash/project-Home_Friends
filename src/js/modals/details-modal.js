@@ -133,13 +133,13 @@ document.addEventListener('DOMContentLoaded', () => {
           card.querySelector('.pet-list-card-gender')?.textContent?.trim() ||
           'Стать',
         description:
-          card.querySelector('.pet-list-card-desc')?.textContent?.trim() ||
+          card.querySelector('.pet-list-card-about')?.textContent?.trim() ||
           'Ніжний та ласкавий малюк. Дуже любить сидіти на ручках.',
         health:
           card.querySelector('.pet-list-card-health')?.textContent?.trim() ||
           'Здоровий, кастрований, вакцинований. Потребує регулярного вичісування шерсті.',
         behavior:
-          card.querySelector('.pet-list-card-behavior')?.textContent?.trim() ||
+          card.querySelector('.pet-list-card-behavoir')?.textContent?.trim() ||
           "Бажано бути єдиною твариною в сім'ї. Не любить конкуренції за увагу.",
       };
 
