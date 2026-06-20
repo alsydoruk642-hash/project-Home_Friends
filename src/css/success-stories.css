@@ -41,7 +41,9 @@
 }
 .swiper-button-next.success-button-next,
 .swiper-button-prev.success-button-prev {
-  border: 1px solid #c3b49d;
+  border: 1px solid var(--accent-light);
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
   border-radius: 8px;
   padding: 12px;
   position: static;
@@ -69,11 +71,6 @@
   background: #eee9e3;
   display: inline-block;
 }
-/* .swiper-button.success-stories-disabled {
-  /* border: 1px solid #f6f4f1;
-  background: #eee9e3;
-  opacity: 0.4;
-  pointer-events: none; */
 
 .swiper-controls.success-swiper-controls {
   display: flex;

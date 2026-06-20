@@ -27,12 +27,12 @@ html {
   justify-content: space-between;
   padding: 0 12px 0 20px;
 
-  background-color: #f6f4f1;
+  background-color: var(--bg-main);
 }
 .header {
   margin: 0 auto;
   max-width: 375px;
-  background-color: #ffffff;
+  background-color: var(--bg-card);
   border-bottom: 1px solid #e7e9fc;
   box-shadow:
     0 1px 6px 0 rgba(46, 47, 66, 0.08),
@@ -64,17 +64,17 @@ html {
 }
 .icon-burger {
   display: block;
-  fill: #2f2f37;
+  fill: var(--text-primary);
 }
 .friend-btn {
   display: block;
-  background-color: #88765c;
+  background-color: var(--btn-bg);
   font-family: inherit;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.5;
-  color: #ffffff;
-  border: 1px solid #88765c;
+  color: var(--btn-text);
+  border: 1px solid var(--btn-border);
   border-radius: 8px;
   width: 130px;
   height: 40px;
@@ -83,8 +83,8 @@ html {
   transition: all 0.2s ease;
 }
 .friend-btn:hover {
-  background-color: #eee9e3;
-  color: #02060a;
+  background-color: var(--btn-hover-bg);
+  color: var(--btn-hover-text);
 }
 .friend-btn:active {
   box-shadow:
@@ -93,7 +93,7 @@ html {
   transform: scale(0.97);
 }
 .friend-btn:focus-visible {
-  outline: 2px solid #c3b49d;
+  outline: 2px solid var(--accent-light);
   outline-offset: 2px;
 }
 .friend-btn:disabled {

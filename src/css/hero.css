@@ -64,14 +64,14 @@
   display: block;
   font-size: 14px;
   line-height: 1.5;
-  color: #ffffff;
-  border: 1px solid #88765c;
+  color: var(--btn-text);
+  border: 1px solid var(--btn-border);
   border-radius: 8px;
   padding: 12px 24px;
   height: 45px;
   width: 171px;
   white-space: nowrap;
-  background-color: #88765c;
+  background-color: var(--btn-bg);
   transition:
     background-color 250ms ease-in-out,
     color 250ms ease-in-out;
@@ -79,8 +79,8 @@
 
 .hero-button:hover,
 .hero-button:focus {
-  background-color: #eee9e3;
-  color: #02060a;
+  background-color: var(--btn-hover-bg);
+  color: var(--btn-hover-text);
 }
 
 .hero-button:active {

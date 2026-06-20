@@ -16,7 +16,7 @@
 
 .animal-modal {
   position: relative;
-  background-color: #f7f6f4;
+  background-color: var(--bg-card);
   border-radius: 30px;
   width: 100%;
   max-width: 320px;
@@ -111,9 +111,9 @@
 }
 
 .animal-modal-btn {
-  background-color: #88765c;
-  color: #ffffff;
-  border: 1px solid #88765c;
+  background-color: var(--btn-bg);
+  color: var(--btn-text);
+  border: 1px solid var(--btn-border);
   height: 48px;
   padding: 12px 24px;
   border-radius: 8px;
@@ -127,8 +127,8 @@
 
 .animal-modal-btn:hover,
 .animal-modal-btn:focus {
-  background-color: #eee9e3;
-  color: #02060a;
+  background-color: var(--btn-hover-bg);
+  color: var(--btn-hover-text);
 }
 .animal-modal-btn:active {
   box-shadow:
