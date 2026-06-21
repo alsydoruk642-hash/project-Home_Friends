@@ -1,19 +1,16 @@
 html {
   scroll-behavior: smooth;
 }
-.nav-link {
-  text-decoration: none;
-}
 .nav-link:focus,
 .nav-link:hover {
   text-decoration-line: underline;
 }
 .nav-link:active {
-  color: #88765c;
+  color: var(--accent);
   text-decoration-line: underline;
 }
 .nav-link:disabled {
-  color: #02060a;
+  fill: var(--text-primary);
   pointer-events: none;
   opacity: 0.3;
 }
