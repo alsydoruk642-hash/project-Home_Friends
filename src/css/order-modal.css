@@ -27,7 +27,7 @@ body.no-scroll {
   position: relative;
   border-radius: 8px;
   width: 335px;
-  background-color: #f6f4f1;
+  background-color: var(--bg-card);
   margin: auto;
   gap: 48px;
 }
@@ -173,7 +173,7 @@ body.no-scroll {
   justify-content: center;
   flex-direction: row;
 
-  border: 1px solid #88765c;
+  border: 1px solid var(--btn-border);
   border-radius: 8px;
   padding: 12px 24px;
   width: 295px;
@@ -183,8 +183,8 @@ body.no-scroll {
   font-size: 16px;
 
   line-height: 1.5;
-  color: #fff;
-  background-color: #88765c;
+  color: var(--btn-text);
+  background-color: var(--btn-bg);
   cursor: pointer;
 
   transition:
@@ -195,8 +195,8 @@ body.no-scroll {
 
 .modal-button:hover,
 .modal-button:focus {
-  color: #02060a;
-  background-color: #eee9e3;
+  color: var(--btn-hover-text);
+  background-color: var(--btn-hover-bg);
   border: 1px solid #88765c;
 }
 
