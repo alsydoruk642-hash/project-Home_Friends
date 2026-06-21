@@ -3,7 +3,6 @@
   padding-top: 64px;
   padding-bottom: 64px;
 }
-
 .success-stories-title {
   font-family: 'Open Sans', sans-serif;
   font-size: 36px;
@@ -11,11 +10,13 @@
   letter-spacing: -0.01em;
   text-align: center;
   margin-bottom: 24px;
+  color: var(--text-primary);
 }
 .success-stories-subtitle {
   line-height: 1.5;
   text-align: center;
   margin-bottom: 40px;
+  color: var(--text-primary);
 }
 
 .success-stories-rate {
@@ -27,6 +28,7 @@
   font-size: 18px;
   line-height: 1.5;
   margin-bottom: 32px;
+  color: var(--text-primary);
 }
 .success-stories-author {
   font-family: 'IBM Plex Sans', sans-serif;
@@ -34,6 +36,7 @@
   font-size: 14px;
   line-height: 1.5;
   margin-bottom: 40px;
+  color: var(--text-primary);
 }
 .swiper-buttons.success-swiper-buttons {
   display: flex;
@@ -84,7 +87,7 @@
 }
 
 .success-stories .swiper {
-  --swiper-theme-color: #02060a;
+  --swiper-theme-color: var(--text-primary);
 }
 
 .success-stories-title {
@@ -120,7 +123,9 @@
 }
 .swiper-button-next.success-button-next,
 .swiper-button-prev.success-button-prev {
-  border: 1px solid #c3b49d;
+  border: 1px solid var(--accent-light);
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
   border-radius: 8px;
   padding: 12px;
   position: static;
@@ -130,22 +135,22 @@
 .swiper-button-prev.success-button-prev:hover,
 .swiper-button-next.success-button-next:focus,
 .swiper-button-prev.success-button-prev:focus {
-  border: 1px solid rgba(2, 6, 10, 0.6);
+  border-color: var(--text-primary);
 }
 .swiper-button-next.success-button-next:active,
 .swiper-button-prev.success-button-prev:active {
-  border: 1px solid rgba(2, 6, 10, 0.6);
+  border-color: var(--text-primary);
   box-shadow:
     inset 0 4px 6px -2px rgba(0, 0, 0, 0.03),
     inset 0 12px 16px -4px rgba(0, 0, 0, 0.08);
-  background: #eee9e3;
+  background: var(--bg-secondary);
 }
 .swiper-button-next.swiper-button-disabled,
 .swiper-button-prev.swiper-button-disabled {
   opacity: 0.4;
   pointer-events: none;
-  border: 1px solid #f6f4f1;
-  background: #eee9e3;
+  border: 1px solid var(--bg-main);
+  background: var(--bg-secondary);
   display: inline-block;
 }
 
@@ -156,8 +161,9 @@
 }
 
 .success-stories .swiper {
-  --swiper-theme-color: #02060a;
+  --swiper-theme-color: var(--text-primary);
 }
+
 .mySwiper
   .swiper-pagination.success-swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal.swiper-pagination-bullets-dynamic {
   left: auto;

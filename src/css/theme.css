@@ -1,4 +1,5 @@
 :root {
+  --star-filter: none;
   /* backgrounds */
   --bg-main: #f6f4f1;
   --bg-secondary: #eee9e3;

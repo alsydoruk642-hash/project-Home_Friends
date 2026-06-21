@@ -44,6 +44,7 @@ html {
   display: block;
 }
 .icon-logo {
+  fill: var(--text-primary);
   transition: transform 0.3s ease;
 }
 .icon-logo:hover,
@@ -54,6 +55,30 @@ html {
 .nav-list {
   display: none;
 }
+.btn-control {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.button-theme {
+  width: 40px;
+  height: 40px;
+
+  border-radius: 8px;
+  border: 1px solid var(--accent-light);
+
+  background-color: transparent;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: all 250ms ease;
+}
+.button-theme:hover,
+.button-theme:focus {
+  background-color: var(--bg-secondary);
+}
 .burger-btn {
   display: block;
   background-color: transparent;
@@ -61,6 +86,12 @@ html {
   width: 48px;
   height: 48px;
   padding: 12px;
+}
+.icon-theme {
+  width: 24px;
+  height: 24px;
+
+  fill: var(--text-primary);
 }
 .icon-burger {
   display: block;
