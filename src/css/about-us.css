@@ -8,7 +8,7 @@
 .about-us-title {
   margin-bottom: 40px;
 
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'OpenSans-Bold', sans-serif;
   font-weight: 700;
   font-size: 36px;
   line-height: 1.2;
@@ -36,7 +36,7 @@
 .about-us-text {
   max-width: 295px;
 
-  font-family: 'IBM Plex Sans', sans-serif;
+  font-family: 'IBMPlexSans-Regular', sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.5;
