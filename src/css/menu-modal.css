@@ -76,7 +76,7 @@ fill: var(--text-primary)
 
 .mobile-list {
   list-style: none;
-
+fill: var(--text-primary)
   display: flex;
   flex-direction: column;
   gap: 32px;
