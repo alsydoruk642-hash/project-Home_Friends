@@ -1,6 +1,9 @@
 html {
   scroll-behavior: smooth;
 }
+.nav-link {
+  color: var(--text-primary);
+}
 .nav-link:focus,
 .nav-link:hover {
   text-decoration-line: underline;
@@ -125,8 +128,8 @@ html {
   outline-offset: 2px;
 }
 .friend-btn:disabled {
-  color: #ffffff;
-  background-color: #88765c;
+  color: var(--bg-card);
+  background-color: var(--accent);
   opacity: 0.3;
 }
 .friend-btn {
