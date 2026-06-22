@@ -62,7 +62,7 @@
 .close-btn {
   width: 48px;
   height: 48px;
-
+fill: var(--text-primary)
   border: none;
   background-color: transparent;
   padding: 0;
