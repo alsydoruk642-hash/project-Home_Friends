@@ -1,3 +1,4 @@
+/* LIGHT-THEME */
 :root {
   --star-filter: none;
   /* backgrounds */
@@ -8,10 +9,15 @@
   /* text */
   --text-primary: #02060a;
   --text-secondary: #575757;
+  --title-primary: #2b2b2b;
+  --text-muted: #7a7a7a;
+  --text-info: #575757;
 
   /* accent */
   --accent: #88765c;
   --accent-light: #c3b49d;
+  --scrollbar-thumb: #e5e5e5;
+  --accent-close-btn: #23154f;
 
   /* borders */
   --border: rgba(2, 6, 10, 0.15);
@@ -20,7 +26,7 @@
   --btn-text: #ffffff;
   --btn-bg: #88765c;
   --btn-hover-bg: #eee9e3;
-
+  --modal-close-btn: #2b2b2b;
   --btn-hover-text: #02060a;
 
   --btn-border: #88765c;
@@ -34,17 +40,24 @@
 
   --text-primary: #f4f1ed;
   --text-secondary: #c0b8ae;
+  --title-primary: #f4f1ed;
+  --text-muted: #c0b8ae;
+  --text-info: #c0b8ae;
 
   --accent: #b59a73;
   --accent-light: #8f7a5d;
+  --accent-close-btn: aqua;
 
   --border: rgba(255, 255, 255, 0.12);
 
   --btn-bg: #b59a73;
   --btn-hover-bg: #3a352f;
-
+  --modal-close-btn: #f4f1ed;
   --btn-text: #ffffff;
   --btn-hover-text: #f4f1ed;
 
   --btn-border: #b59a73;
+}
+[data-theme='dark'] .success-stories-rate img {
+  filter: invert(1);
 }

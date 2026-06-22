@@ -40,7 +40,7 @@
   font-weight: 400;
   font-size: 16px;
   line-height: 1.5;
-  color: var(--bg-main);
+  color: var(--text-primary);
 }
 
 .swiper-button-prev.about-us-button-prev,
@@ -84,7 +84,7 @@
 }
 
 .swiper-pagination.about-us-swiper-pagination {
-  --swiper-theme-color: var(--);
+  --swiper-theme-color: var(--text-primary);
 }
 
 .about-us-controls
@@ -97,7 +97,7 @@
 .about-us-swiper-pagination .swiper-pagination-bullet {
   width: 8px;
   height: 8px;
-  background: #02060a;
+  background: var(--text-primary);
   opacity: 0.2;
   transition: all 250ms ease;
 }
@@ -113,7 +113,7 @@
   height: 8px;
   margin: 0 4px !important;
   border-radius: 50%;
-  background-color: #02060a;
+  background-color: var(--text-primary);
   opacity: 0.2;
   transition: opacity 250ms ease;
 }

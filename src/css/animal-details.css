@@ -35,13 +35,14 @@
   background: none;
   border: none;
   font-size: 22px;
-  color: #2b2b2b;
+  fill: var(--modal-close-btn);
   cursor: pointer;
-  transition: transform 0.2s ease;
+  transition: all transform 0.2s ease;
 }
 
 .animal-modal-close:hover {
   transform: scale(1.1);
+  color: var(--accent-close-btn);
 }
 
 .animal-modal-thumb {
@@ -63,14 +64,14 @@
 
 .animal-modal-type {
   font-size: 12px;
-  color: #7a7a7a;
+  color: var(--text-muted);
   margin-bottom: 4px;
 }
 
 .animal-modal-title {
   font-size: 28px;
   font-weight: 700;
-  color: #2b2b2b;
+  color: var(--title-primary);
   margin-bottom: 4px;
 }
 
@@ -83,7 +84,7 @@
 
 .animal-modal-info-data {
   font-size: 14px;
-  color: #575757;
+  color: var(--text-info);
 }
 
 .animal-modal-scroll-container {
@@ -98,7 +99,7 @@
 .animal-detail-label {
   font-weight: 600;
   font-size: 14px;
-  color: #2b2b2b;
+  color: var(--title-primary);
   margin-top: 8px;
   margin-bottom: 4px;
 }
@@ -106,7 +107,7 @@
 .animal-detail-text {
   font-size: 14px;
   line-height: 1.4;
-  color: #575757;
+  color: var(--text-info);
   margin-bottom: 8px;
 }
 
