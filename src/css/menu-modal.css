@@ -11,6 +11,7 @@
     opacity 250ms ease,
     visibility 250ms ease;
 }
+
 .backdrop.is-open {
   opacity: 1;
   visibility: visible;
@@ -21,9 +22,10 @@
   top: 0;
   right: 0;
   padding: 0 20px 80px;
-  height: 100%;
+
   width: 100%;
-  overflow-x: hidden;
+  height: 100%;
+  overflow-y: auto;
 
   background-color: var(--bg-card);
 
@@ -41,8 +43,7 @@
 }
 
 .no-scroll {
-  overflow-x: hidden;
-  overflow-y: hidden;
+  overflow: hidden;
 }
 
 .menu-header {
@@ -52,23 +53,16 @@
   height: 64px;
   flex-shrink: 0;
 }
-.menu {
-   display: flex;
-   flex-direction: row;
-   justify-content: space-between;
-  align-items: center;
-  width: 100%;
-}
+
 .menu-logo {
   display: flex;
   align-items: center;
-  fill: var(--text-primary);
 }
 
 .close-btn {
   width: 48px;
   height: 48px;
-
+fill: var(--text-primary)
   border: none;
   background-color: transparent;
   padding: 0;
@@ -76,39 +70,40 @@
   display: flex;
   justify-content: center;
   align-items: center;
-fill: var(--text-primary);
+
   cursor: pointer;
 }
 
 .mobile-list {
   list-style: none;
-
+fill: var(--text-primary)
   display: flex;
   flex-direction: column;
   gap: 32px;
+
   padding-top: 24px;
-  margin: auto 0;
- 
-width: 100%;
+  padding-bottom: 64px;
+  margin: 0;
+
   flex-grow: 1;
+
   font-family: 'IBMPlexSans-Regular', sans-serif;
   font-weight: 400;
   font-size: 14px;
   line-height: 1.5;
-  color: var(--text-primary);
+  color: #02060a;
 }
 
 .mobile-list a {
-  color: inherit;
+ color: var(--text-primary)
   text-decoration: none;
 }
 
 .menu-friend-btn {
   width: 100%;
   height: 37px;
-  margin: auto auto 80px auto;
-  padding: 0 20px;
-  
+
+  margin-top: auto;
 
   border: 1px solid var(--btn-border);
   border-radius: 8px;
@@ -138,19 +133,15 @@ width: 100%;
 @media screen and (min-width: 768px) {
   .mobile-menu {
     padding: 0 32px 32px;
-    width: 100%;
   }
 
   .mobile-list {
     text-align: center;
   }
-  .menu-header {
-    padding: 0;
-  }
+
   .menu-friend-btn {
-    max-width: 196px;
-    min-width: 196px;
-    margin: auto auto 32px auto;
+    width: 196px;
+    margin: auto auto;
   }
 }
 
