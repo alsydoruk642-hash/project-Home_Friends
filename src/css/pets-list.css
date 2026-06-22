@@ -58,12 +58,12 @@
 
 .pet-list-categories-btn:hover,
 .pet-list-categories-btn:focus {
-  background-color: #eee9e3;
+  background-color: var(--bg-secondary);
 }
 
 .pet-list-categories-btn.active {
   font-weight: 500;
-  background-color: #eee9e3;
+  background-color: var(--bg-secondary);
 }
 
 .pet-list-cards {

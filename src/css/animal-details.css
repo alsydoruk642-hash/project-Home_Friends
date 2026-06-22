@@ -37,11 +37,12 @@
   font-size: 22px;
   color: var(--text-primary);
   cursor: pointer;
-  transition: transform 0.2s ease;
+  transition: all transform 0.2s ease;
 }
 
 .animal-modal-close:hover {
   transform: scale(1.1);
+  color: var(--accent-close-btn);
 }
 
 .animal-modal-thumb {

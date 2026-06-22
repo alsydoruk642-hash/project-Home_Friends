@@ -12,6 +12,7 @@
 @import url('./container.css');
 @import url('./animations.css');
 @import url('./theme.css');
+@import url('./fonts.css');
 
 /* Sections style */
 @import url('./header.css');
@@ -26,42 +27,3 @@
 @import url('./menu-modal.css');
 @import url('./animal-details.css');
 @import url('./order-modal.css');
-
-@font-face {
-  font-family: 'IBMPlexSans-Bold';
-  src: url('../fonts/IBMPlexSans-Bold.woff2') format('woff2');
-  font-weight: 700;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'IBMPlexSans-Regular';
-  src: url('../fonts/IBMPlexSans-Regular.woff2') format('woff2');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'IBMPlexSans-Medium';
-  src: url('../fonts/IBMPlexSans-Medium.woff2') format('woff2');
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'IBMPlexSans-SemiBold';
-  src: url('../fonts/IBMPlexSans-SemiBold.woff2') format('woff2');
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'OpenSans-Bold';
-  src: url('../fonts/OpenSans-Bold.woff2') format('woff2');
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
