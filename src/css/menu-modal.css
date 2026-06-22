@@ -95,7 +95,7 @@ fill: var(--text-primary)
 }
 
 .mobile-list a {
-  color: inherit;
+ color: var(--text-primary)
   text-decoration: none;
 }
 
