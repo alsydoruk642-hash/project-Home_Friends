@@ -35,7 +35,7 @@
   background: none;
   border: none;
   font-size: 22px;
-  fill: var(--modal-close-btn);
+  color: var(--text-primary);
   cursor: pointer;
   transition: all transform 0.2s ease;
 }
@@ -64,14 +64,14 @@
 
 .animal-modal-type {
   font-size: 12px;
-  color: var(--text-muted);
+  color: var(--text-primary);
   margin-bottom: 4px;
 }
 
 .animal-modal-title {
   font-size: 28px;
   font-weight: 700;
-  color: var(--title-primary);
+  color: var(--text-primary);
   margin-bottom: 4px;
 }
 
@@ -84,7 +84,7 @@
 
 .animal-modal-info-data {
   font-size: 14px;
-  color: var(--text-info);
+  color: var(--text-secondary);
 }
 
 .animal-modal-scroll-container {
@@ -99,7 +99,7 @@
 .animal-detail-label {
   font-weight: 600;
   font-size: 14px;
-  color: var(--title-primary);
+  color: var(--text-primary);
   margin-top: 8px;
   margin-bottom: 4px;
 }
@@ -107,7 +107,7 @@
 .animal-detail-text {
   font-size: 14px;
   line-height: 1.4;
-  color: var(--text-info);
+  color: var(--text-secondary);
   margin-bottom: 8px;
 }
 
